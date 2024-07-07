@@ -21,6 +21,7 @@ pipeline {
                 sh '''
                     /var/jenkins_home/apache-maven-3.9.8/bin/mvn --batch-mode -V -U -e checkstyle:checkstyle pmd:pmd pmd:cpd findbugs:findbugs
                 '''
+                echo 'Analysis completed'
             }
         }
     }
