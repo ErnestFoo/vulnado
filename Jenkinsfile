@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                scm
+                git branch: 'master', url: 'https://github.com/ErnestFoo/vulnado.git'
             }
         }
         stage('Build') {
